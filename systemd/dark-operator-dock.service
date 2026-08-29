@@ -1,0 +1,13 @@
+[Unit]
+Description=Dark Operator V2 Shortcut Dock
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nwg-dock-hyprland -d -i 40 -p bottom -a center -mb 10 -w 5 -nolauncher
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
